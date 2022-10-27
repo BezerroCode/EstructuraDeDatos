@@ -9,7 +9,7 @@
 
 
 ## ➤ HITO 2 
-## ➤ POO
+##  POO
 - 📝 Repositorio del  [Hito 2](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/Hito2)
 ### [LABORATORIOS](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/Hito2/Labs)
 ### [EVALUACION PROCESUAL](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/Hito2/Procesual) 
