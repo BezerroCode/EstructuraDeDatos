@@ -1,6 +1,6 @@
 <h1 align="center"> ESTRUCTURA DE DATOS  </h1>
 
-<img src="https://i.ibb.co/7WfJBBf/imagen-2022-10-27-001820228.png" alt="imagen-2022-10-27-001820228" border="0">
+<img src="https://i.ibb.co/xXm2GVW/imagen-2022-11-06-110555514.png" alt="imagen-2022-10-27-001820228" border="0">
 
 
 <h1 align="center"> PORTAFOLIO</h1>
