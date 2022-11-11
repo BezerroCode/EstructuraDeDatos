@@ -83,4 +83,18 @@ public class Numeros {
     }
 
 
+    public boolean buscar(int valorEliminado) {
+        int elementoEliminado=0;
+        boolean encontrado=false;
+        Numeros aux= new Numeros(this.max);
+        while(!esVacio()){
+            elementoEliminado=eliminar();
+            if(elementoEliminado==valorEliminado){
+                encontrado=true;
+            }
+            aux.insertar(elementoEliminado);
+        }
+        vaciar(aux);
+        return encontrado;
+    }
 }
