@@ -66,22 +66,7 @@ public class Main {
         numeros.mostrar();
     }
 
-    //mostrar valor no repetidos
-//    public static void eliminarElementosRepetidos(Numeros numeros){
-//        Numeros aux = new Numeros(100);
-//        int valorEliminado=0;
-//        int valorExtraidoDeLaPila = 0;
-//        while (numeros.esVacio() == false) {
-//            valorEliminado = numeros.eliminar();
-//            if (valorEliminado != valorExtraidoDeLaPila) {
-//                aux.insertar(valorEliminado);
-//            }
-//            valorExtraidoDeLaPila=valorEliminado;
-//            numeros.eliminar();
-//        }
-//        numeros.vaciar(aux);
-//        numeros.mostrar();
-//    }
+
     //mostrar los valores que no se repiten en la cola
     public static void mostrarValoresNoRepetidos(Numeros numeros) {
         int valorEliminado=0;
