@@ -33,7 +33,8 @@ public class Main {
 
         //mostrarValoresNoRepetidos(numeros);       //metodo improvisado
         //eliminaRepetidos(numeros);                //metodo empleddo
-        //intercambiarMayores(numeros,numeros2);
+        //intercambiarMayores(numeros,numeros2);    //metodo imcompleto
+        intercambiarMayor(numeros,numeros2);
 
     }
 
@@ -164,6 +165,32 @@ public class Main {
         }
     }
 
+    //intercambiar el mayor valor de numeros con el mayor valor de numeros2
+    public static void intercambiarMayor(Numeros numeros, Numeros numeros2) {
+        int mayorValor = numeroMayor(numeros);
+        int mayorValor2 = numeroMayor(numeros2);
+        int valorEliminado = 0;
+        Numeros aux = new Numeros(100);
+        Numeros aux2 = new Numeros(100);
+        while (numeros.esVacio() == false) {
+            valorEliminado = numeros.eliminar();
+            if (mayorValor != valorEliminado) {
+                aux.insertar(valorEliminado);
+            }
+        }
+        while (numeros2.esVacio() == false) {
+            valorEliminado = numeros2.eliminar();
+            if (mayorValor2 != valorEliminado) {
+                aux2.insertar(valorEliminado);
+            }
+        }
+        numeros.insertar(mayorValor2);
+        numeros2.insertar(mayorValor);
+        numeros.vaciar(aux);
+        numeros2.vaciar(aux2);
+        numeros.mostrar();
+        numeros2.mostrar();
+    }
 
 
 }
