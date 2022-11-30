@@ -18,6 +18,7 @@ public class Main {
         numeros2.insertar(11);
         numeros2.insertar(301);
 
+        //EN CASO DE USAR EL METODO DE ELIMINAR REPETIDOS
 //        Numeros numeros = new Numeros(5);
 //        numeros.insertar(10);
 //        numeros.insertar(5);
@@ -30,10 +31,7 @@ public class Main {
         //numeroMenor(numeros);
         //numeroMayor(numeros);
         //menorValorAlPrincipio(numeros);
-
-        //mostrarValoresNoRepetidos(numeros);       //metodo improvisado
         //eliminaRepetidos(numeros);                //metodo empleddo
-        //intercambiarMayores(numeros,numeros2);    //metodo imcompleto
         intercambiarMayor(numeros,numeros2);
 
     }
@@ -88,47 +86,7 @@ public class Main {
         numeros.mostrar();
     }
 
-
-    //mostrar los valores que no se repiten en la cola
-    public static void mostrarValoresNoRepetidos(Numeros numeros) {
-        int valorEliminado=0;
-        Numeros aux = new Numeros(100);
-        while (numeros.esVacio() == false) {
-            valorEliminado = numeros.eliminar();
-            if (numeros.buscar(valorEliminado) == false) {      //metodo buscador
-                aux.insertar(valorEliminado);
-                numeros.eliminar();
-            }
-
-        }
-        numeros.vaciar(aux);
-        numeros.mostrar();
-    }
-
-    public static void intercambiarMayores(Numeros colaA, Numeros colaB){
-        int maxcolaA = numeroMayor(colaA);
-        int maxcolaB = numeroMayor(colaB);
-        //System.out.println(maxcolaA+maxcolaB);
-        int nrmElementocolaA= colaA.nroElementos();
-        int nroElementoB=colaB.nroElementos();
-        int valorEliminado;
-
-        for(int i=1;i<= nrmElementocolaA;i++){
-            valorEliminado=colaA.eliminar();
-            if(valorEliminado==maxcolaA){
-                colaA.insertar(maxcolaA);
-            }else {colaA.insertar(valorEliminado);}
-        }
-        for(int i=1;i<= nroElementoB;i++){
-            valorEliminado=colaB.eliminar();
-            if(valorEliminado==maxcolaB){
-                colaB.insertar(maxcolaB);
-            }else {colaB.insertar(valorEliminado);}
-        }
-        colaA.mostrar();
-        colaB.mostrar();
-    }
-
+    //MOSTRAR VALORES NO REPETIDOS DE LA COLA
     //METODO CON IF Y UN METODO ADICIONAL
     public static void eliminaRepetidos(Numeros numeros){
         int valorExtraido= 0;
