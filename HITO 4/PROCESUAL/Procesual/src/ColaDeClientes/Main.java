@@ -36,6 +36,7 @@ public class Main {
         //mover_Clientes_Por_Edad(colaCli, 60);
 
         //mover_Clientes_Por_Nombre(colaCli,colaCli2,"Saul");
+        //mover_Clientes_Por_Nombre_2(colaCli,colaCli2,"Saul");
     }
 
 //13.Promoción para usuarios de Bolivia.
@@ -113,6 +114,35 @@ public class Main {
         while (!colaAux.esVacio()) {
             colaCli.insertar(colaAux.eliminar());
         }
+        colaCli.mostrar();
+        colaCli2.mostrar();
+    }
+
+    public static void mover_Clientes_Por_Nombre_2(ColaDeClientes colaCli, ColaDeClientes colaCli2,String nombre) {
+        int nroElemColaA = colaCli.nroElementos();
+        int nroElemColaB = colaCli2.nroElementos();
+        ColaDeClientes aux = new ColaDeClientes(100);
+        ColaDeClientes aux2 = new ColaDeClientes(100);
+
+        Cliente valorEliminado = null;
+        for (int i = 1; i <= nroElemColaA; i++) {
+            valorEliminado = colaCli.eliminar();
+            if (valorEliminado.getNombre().equals(nombre)) {
+                colaCli2.insertar(valorEliminado);
+            } else {
+                colaCli.insertar(valorEliminado);
+            }
+        }
+        for (int i = 1; i <= nroElemColaB; i++) {
+            valorEliminado = colaCli2.eliminar();
+            if (valorEliminado.getNombre().equals(nombre)) {
+                colaCli2.insertar(valorEliminado);
+            } else {
+                aux2.insertar(valorEliminado);
+            }
+        }
+        colaCli.vaciar(aux);
+        colaCli2.vaciar(aux2);
         colaCli.mostrar();
         colaCli2.mostrar();
     }
