@@ -5,7 +5,6 @@
 
 <h1 align="center"> PORTAFOLIO</h1>
 
-![snake gif](https://raw.githubusercontent.com/avinash-218/avinash-218/output/github-contribution-grid-snake.svg)
 
 
 ## ➤ HITO 2 
@@ -13,12 +12,12 @@
 - 📝 Repositorio del  [Hito 2](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/Hito2)
 ### [LABORATORIOS](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/Hito2/Labs)
 ### [EVALUACION PROCESUAL](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/Hito2/Procesual) 
-### [EVALUACION](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/Hito2/Examen) 
+### [EXAMEN](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/Hito2/Examen) 
 
 
 ## ➤ Code Example Poo in Java
 
-```javascript
+```JAVA
 public class Vehiculo {
 
     private String nombre;
@@ -114,10 +113,10 @@ public class MainVehiculo {
 - 📝 Repositorio del  [Hito 3](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%203)
 ### [LABORATORIOS](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%203/LABS/PilasPoo)
 ### [EVALUACION PROCESUAL](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%203/PROCESUAL) 
-### [EVALUACION](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%203/EXAMEN/Defensa_Hito_3) 
+### [EXAMEN](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%203/EXAMEN/Defensa_Hito_3) 
 
-## ➤ STRUCTURE OF A STACK
-```javascript
+## ➤ ESTRUCTURA DE UNA PILA (STACK)
+```JAVA
 public class PilaNumeros {
     private int tope;
     private int max;
@@ -197,6 +196,110 @@ public class PilaNumeros {
     }
 }
 ```
+
+
+## ➤ HITO 4
+##  COLAS (QUEUES)
+- 📝 Repositorio del  [Hito 4](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%204)
+### [LABORATORIOS](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%204/LABS/Colas/src/ManejoDeColasHito4/ColaNumeros)
+### [EVALUACION PROCESUAL](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%204/PROCESUAL) 
+### [EXAMEN](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%204/EXAMEN/Defensa_Hito_4/src/defensa_colas_hito4) 
+
+
+## ➤ ESTRUCTURA DE UNA COLA (QUEUE)
+```JAVA
+public class Numeros {
+    private int max;
+    private int fin;
+    private int ini;
+    private int cNum[];
+
+    public Numeros(int max){
+        this.max = max;
+        this.cNum= new int[this.max+1];
+        this.ini = 0;
+        this.fin = 0;
+    }
+
+    public boolean esVacio(){
+        if(this.ini==0 && this.fin==0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean esLleno(){
+        if(this.fin==this.max){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public int nroElementos(){
+        return fin-ini;
+    }
+
+    public void insertar(int elemento){
+        if(!esLleno()){
+            fin++;
+            cNum[fin]=elemento;
+        }else{
+            System.out.println("La cola esta llena");
+        }
+    }
+    // inicio = 0        1,2,3,4,5              final=5
+
+    public int eliminar(){
+        int elemento=0;
+        if(!esVacio()){
+            ini++;
+            elemento=cNum[ini];
+            if (ini==fin){
+                ini=0;
+                fin=0;
+            }
+        }else{
+            System.out.println("La cola esta vacia");
+        }
+        return elemento;
+    }
+
+    public void mostrar(){
+        if(esVacio()){
+            System.out.println("La cola esta vacia");
+        }else{
+            int elementoEliminado=0;
+            System.out.println("Mostrando datos de la cola");
+            Numeros aux= new Numeros(this.max);
+            while(!esVacio()){
+                elementoEliminado=eliminar();
+                System.out.println("valor: " + elementoEliminado);
+                aux.insertar(elementoEliminado);
+            }
+            vaciar(aux);
+        }
+    }
+
+    public void vaciar(Numeros aux) {
+        int elementoEliminado=0;
+        while(!aux.esVacio()){
+            elementoEliminado=aux.eliminar();
+            insertar(elementoEliminado);
+        }
+    }
+
+}
+```
+
+## ➤ HITO 5
+##  PROYECTO FINAL
+- 📝 Repositorio del  [Hito 5](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%205)
+### [CODIGO PROYECTO](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%205/Shitpost-Game-Memory)
+### [DIAPOSITIVAS](https://github.com/FreddyMachaca/EstructuraDeDatos/blob/main/HITO%205/DIAPOSITIVAS.pdf) 
+
+
 <h2 align='center'> Thank you⭐ </h2>
 <br>
 <p align='center'>
