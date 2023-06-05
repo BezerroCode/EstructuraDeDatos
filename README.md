@@ -299,9 +299,3 @@ public class Numeros {
 ### [CODIGO PROYECTO](https://github.com/FreddyMachaca/EstructuraDeDatos/tree/main/HITO%205/Shitpost-Game-Memory)
 ### [DIAPOSITIVAS](https://github.com/FreddyMachaca/EstructuraDeDatos/blob/main/HITO%205/DIAPOSITIVAS.pdf) 
 
-
-<h2 align='center'> Thank you⭐ </h2>
-<br>
-<p align='center'>
-<img src="https://media.giphy.com/media/O51MQ3DduOcGW6ofR3/giphy.gif" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></img></p>
-<br>
